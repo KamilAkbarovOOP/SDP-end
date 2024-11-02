@@ -1,13 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskManager {
+class TaskManager {
     private static TaskManager instance;
-    private List<Task> tasks;
+    private final List<Task> tasks = new ArrayList<>();
 
-    private TaskManager() {
-        tasks = new ArrayList<>();
-    }
+    private TaskManager() {}
 
     public static TaskManager getInstance() {
         if (instance == null) {
@@ -18,19 +16,11 @@ public class TaskManager {
 
     public void addTask(Task task) {
         tasks.add(task);
-        System.out.println("Task added: " + task.getDescription() + " " + task.getPriority() );
     }
 
     public void listTasks() {
-        if (tasks.isEmpty()) {
-            System.out.println("No tasks");
-        } else {
-            for (int i = 0; i < tasks.size(); i++) {
-                Task task = tasks.get(i);
-                System.out.println((i + 1) + ". " + tasks.get(i).getDescription() + " " + task.getPriority()) ;
-            }
+        for (Task task : tasks) {
+            System.out.println(task.getDescription());
         }
     }
-}
-
-//Singleton: all operations with tasks are performed through this one object
+} //Singleton: all operations with tasks are performed through this one object

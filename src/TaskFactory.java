@@ -1,4 +1,4 @@
-public class TaskFactory {
+public class TaskFactory { //Adds Priority
     public static Task createTask(String type, String description) {
         switch (type.toLowerCase()) {
             case "high":

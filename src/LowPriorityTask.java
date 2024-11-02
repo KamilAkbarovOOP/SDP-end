@@ -6,4 +6,4 @@ public class LowPriorityTask extends Task {
     public String getPriority() {
         return "[Low]";
     }
-}
+} //LowPriorityTask makes [Low] priority for task

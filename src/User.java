@@ -35,5 +35,5 @@ public class User {
             }
             return new User(this);
         }
-    } //Builder: in User class allows to customize the object and add only needed properties
-}
+    }
+} //Builder: in User class allows to customize the object and add only needed properties
