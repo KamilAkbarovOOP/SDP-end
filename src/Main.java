@@ -31,7 +31,7 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    // Добавление задачи
+
                     System.out.print("Enter task description: ");
                     String description = scanner.nextLine();
                     System.out.print("Enter task priority (High/Low): ");
@@ -74,20 +74,20 @@ public class Main {
                     break;
 
                 case 3:
-                    // Добавление внешней задачи
+
                     System.out.print("Enter external task info: ");
                     String info = scanner.nextLine();
                     managerFacade.addExternalTask(info);
                     break;
 
                 case 4:
-                    // Список задач
+
                     System.out.println("\n--------------- Tasks ---------------");
                     managerFacade.listTasks();
                     break;
 
                 case 5:
-                    // Сортировка задач
+
                     System.out.println("Choose a sorting strategy:");
                     System.out.println("1. Sort by Priority");
                     System.out.println("2. Sort by Deadline");

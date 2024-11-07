@@ -52,6 +52,6 @@ public class TaskManagerFacade {
 
 
     public void undoLastCommand() {
-        taskManager.undoLastCommand();  // Делегируем задачу TaskManager
+        taskManager.undoLastCommand();
     }
 }
